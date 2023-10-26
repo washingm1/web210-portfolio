@@ -1,0 +1,268 @@
+/* COLOR PALLETTE: 
+Background - #dfdbe5
+header - #232c33
+section background - #55557c
+additional: #E3B505, #8F5C38
+
+*/
+
+@import url("https://fonts.googleapis.com/css2?family=Raleway&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Raleway", sans-serif;
+  background: rgb(210, 214, 255);
+  background: linear-gradient(
+    135deg,
+    rgba(210, 214, 255, 1) 0%,
+    rgba(219, 215, 255, 1) 100%
+  );
+  display: inline-block;
+}
+
+a {
+  color: #000000;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+header {
+  background-color: #232c33;
+  padding: 2vh;
+  color: rgb(255, 255, 255);
+  text-align: center;
+}
+
+header h1 {
+  margin-bottom: 20px;
+  font-size: 4rem;
+  text-shadow: 2px 5px 20px #000000;
+}
+
+/* Navbar */
+nav {
+  margin-top: 0;
+  width: 100%;
+  background: #fff;
+}
+
+nav ul {
+  width: 100%;
+  text-align: center;
+  list-style: none;
+}
+
+nav ul li {
+  font-size: 2rem;
+  font-weight: bold;
+  display: inline-block;
+  position: relative;
+  padding: 10px;
+  background: #fff;
+  cursor: pointer;
+  width: auto;
+  height: auto;
+}
+
+nav ul li:hover {
+  background: #232c33;
+  color: #fff;
+}
+
+nav ul li ul {
+  position: absolute;
+  margin-top: 0;
+  left: -100vw;
+  width: 150px;
+}
+
+nav ul li ul li {
+  background: #232c33;
+  display: block;
+  color: #fff;
+  width: auto;
+  height: auto;
+  font-size: 1rem;
+}
+
+nav ul li ul li:hover {
+  background: #55557c;
+}
+
+nav ul li:hover ul {
+  display: block;
+  left: 0px;
+  transition: left 0.3s ease-in-out;
+}
+
+/* Experience GRID */
+
+.experience-header {
+  margin-top: 5vh;
+  font-size: 5rem;
+  text-align: center;
+}
+
+@media (min-width: 1001px) {
+  .experience-wrapper {
+    display: grid;
+    width: 80%;
+    margin-left: 10%;
+    margin-top: 3vh;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2px;
+  }
+}
+
+/* Grid Item-specific CSS */
+.experience-item:first-child {
+  background-color: #232c33;
+}
+.experience-item:nth-child(2) {
+  background-color: #867512;
+}
+.experience-item:nth-child(3) {
+  background-color: #232c33;
+}
+.experience-item:nth-child(4) {
+  grid-column: 1/4;
+  background-color: #55557c;
+}
+
+.experience-item {
+  justify-content: center;
+  display: inline-block;
+  height: 40vh;
+  border-radius: 6px;
+  color: white;
+}
+
+@media (max-width: 1000px) {
+  .experience-wrapper {
+    display: grid;
+    width: 80%;
+    margin-left: 10%;
+    margin-top: 3vh;
+    grid-template-columns: 1fr;
+    gap: 2px;
+  }
+
+  .experience-item:nth-child(4) {
+    grid-column: 1/1;
+    background-color: #55557c;
+  }
+
+  .experience-item {
+    overflow: hidden;
+    width: 90%;
+    max-width: 90%;
+    justify-content: center;
+    margin-left: 5%;
+  }
+
+  .experience-desc {
+    max-width: 100%;
+  }
+
+  #budgetCalcImg {
+    height: 30vh;
+    max-width: 100%;
+  }
+}
+
+.experience-title {
+  font-weight: bold;
+  font-size: 3rem;
+  text-align: center;
+  max-height: 5vh;
+  width: 100%;
+  margin-top: 2vh;
+}
+
+.experience-desc {
+  font-size: 1.4rem;
+  padding: 2vw;
+}
+
+.experience-item:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+  transition: ease-in-out 0.3s;
+}
+
+#budgetCalcImg {
+  height: 25vh;
+  max-height: 25vh;
+}
+
+/* Additional Section */
+section h2 {
+  font-size: 3rem;
+  text-align: center;
+}
+
+.section-content {
+  display: flex;
+  width: 90%;
+  margin-left: 5%;
+  color: white;
+  margin-top: 5vh;
+  background-color: #55557c;
+}
+
+.section-wrapper {
+  padding: 3rem;
+  height: auto;
+}
+
+section h3 {
+  margin-top: 2vh;
+  font-size: 2vh;
+}
+
+section p {
+  height: auto;
+  font-size: 1.3vw;
+  line-height: 2vh;
+  max-height: 100%;
+}
+
+section a {
+  margin-top: 10vh;
+}
+
+section img {
+  padding-left: 2vw;
+  float: right;
+  height: auto;
+
+  max-height: 100%;
+}
+
+footer {
+  width: 100%;
+  color: white;
+  background-color: #232c33;
+  margin-top: 4vh;
+  align-items: center;
+  text-align: center;
+  font-size: 1.2rem;
+}
+
+footer a {
+  color: white;
+  text-decoration: none;
+}
+
+footer ul {
+  padding: 2rem;
+}
+
+footer ul li {
+  list-style: none;
+}

@@ -1,0 +1,247 @@
+/* COLOR PALLETTE: 
+Background - #dfdbe5
+header - #232c33
+section background - #55557c
+additional: #E3B505, #8F5C38
+
+*/
+
+@import url("https://fonts.googleapis.com/css2?family=Raleway&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lato&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  background: rgb(87, 107, 180);
+  background: linear-gradient(
+    135deg,
+    rgba(87, 107, 180, 1) 0%,
+    rgba(43, 56, 126, 1) 100%
+  );
+}
+
+a {
+  color: #000000;
+}
+
+a:hover {
+  text-decoration: none;
+}
+
+header {
+  padding: 2vh;
+  color: white;
+  text-align: center;
+  float: right;
+  position: relative;
+  width: 100%;
+}
+
+header h1 {
+  margin-bottom: 20px;
+  font-size: 4rem;
+}
+
+header p {
+  width: 80%;
+  margin-left: 10%;
+}
+
+/* Navbar */
+
+.fa-bars {
+  margin-top: 2vh;
+  margin-left: 1vw;
+  color: white;
+  size: 20rem;
+}
+
+nav {
+  position: fixed;
+  margin-top: 0;
+  width: 10%;
+  height: auto;
+  top: 40%;
+  background-color: #a7853d;
+  border-radius: 8px;
+}
+
+/* Link container */
+nav ul {
+  list-style: none;
+}
+
+/* First Level Links */
+nav ul li {
+  color: white;
+  text-align: center;
+  font-size: 1.4vw;
+  font-weight: bold;
+  padding: 10px;
+  cursor: pointer;
+  width: auto;
+}
+
+nav ul li:hover {
+  background: #232c33;
+  color: #fff;
+  transition: 0.3s ease-in-out;
+}
+/* Second Level Link Container */
+nav ul li ul {
+  position: absolute;
+  margin-top: 0;
+  left: -100vw;
+  width: 150px;
+}
+
+/* Second Level Links */
+nav ul li ul li {
+  background: #232c33;
+  display: block;
+  color: #fff;
+  width: auto;
+  height: auto;
+  font-size: 1rem;
+}
+
+nav ul li ul li:hover {
+  background: #55557c;
+}
+
+nav ul li:hover ul {
+  display: block;
+  left: 0px;
+  transition: left 0.3s ease-in-out;
+}
+
+.grid-title {
+  display: inline-block;
+  width: 100%;
+  text-align: center;
+  font-size: 4rem;
+  color: white;
+  font-weight: bold;
+  border-top: solid #232c33 5px;
+  margin-top: 5vh;
+  padding-top: 2vh;
+}
+
+.project-grid-container {
+  display: inline-grid;
+  grid-template-areas:
+    "proj1 proj1 proj1 proj1 proj2 proj2 proj2"
+    "proj4 proj4 proj4 proj4 proj2 proj2 proj2"
+    "proj3 proj3 proj3 proj3 proj3 proj3 proj3";
+  margin-top: 5vh;
+  text-align: center;
+  width: 70%;
+  margin-left: 15%;
+  gap: 25px;
+  height: auto;
+  margin-bottom: 10vh;
+}
+
+@media (max-width: 1100px) {
+  .project-grid-container {
+    display: inline-grid;
+    grid-template-areas:
+      "proj1 proj1 proj1 proj1"
+      "proj2 proj2 proj2 proj2"
+      "proj3 proj3 proj3 proj3"
+      "proj4 proj4 proj4 proj4";
+    margin-top: 5vh;
+    text-align: center;
+    width: 70%;
+    margin-left: 15%;
+    gap: 20px;
+    height: auto;
+  }
+}
+
+.project-item {
+  border-radius: 10px;
+  /* background-color: #605856; */
+  height: auto;
+}
+
+.project-image:hover {
+  transform: scale(1.1);
+  transition: 0.3s ease-in-out;
+}
+
+.project-image:hover + .project-grid-container {
+  gap: 40px;
+}
+
+.project-item:nth-child(1) {
+  grid-area: proj1;
+}
+
+.project-item:nth-child(2) {
+  grid-area: proj2;
+}
+
+.project-item:nth-child(3) {
+  grid-area: proj3;
+}
+
+.project-item:nth-child(4) {
+  grid-area: proj4;
+}
+
+.project-title {
+  color: white;
+  font-size: 3vh;
+  font-weight: bold;
+  margin-bottom: 2vh;
+}
+
+.project-image {
+  box-shadow: 0 0 20px black;
+  width: 100%;
+  height: auto;
+  max-height: 80%;
+  overflow: hidden;
+}
+.project-image a {
+  position: relative;
+}
+
+.project-image img {
+  width: 100%;
+  max-height: 100%;
+}
+
+.project-image img:hover {
+  cursor: pointer;
+}
+
+footer {
+  color: white;
+  padding: 2rem;
+}
+
+.contact-title {
+  text-align: center;
+  font-weight: bold;
+  font-size: 2vh;
+}
+
+footer ul {
+  text-align: center;
+}
+
+footer li {
+  list-style: none;
+}
+
+footer li a {
+  color: white;
+  text-decoration: none;
+}
